@@ -10,12 +10,12 @@ ${YELLOW}.git/config${RESET}
 ${GRAY}# must be inside a repo to use it${RESET}
 
 ${GRAY}{local will overwrite global and global will overwrite system}${RESET}
-${SLATE_GRAY}──» ─────────────────────────────────✧*̥˚ ─── ✦${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
 git branch ${ORANGE}-M${RESET} ${CYAN}main${RESET}
 ${GRAY}# changes default master branch to main${RESET}
 ${GRAY}# setting init.defaultBranch in --gobal or --system will automatically set it for your future 'git init'${RESET}
 
-${SLATE_GRAY}──» ─────────────────────────────────✧*̥˚ ─── ✦${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
 git config ${BLUE}--global${RESET} ${CYAN}credential.helper${RESET}
 ${YELLOW}"cache --timeout=3600"${RESET}
 ${GRAY}# 3600s = 1 hour, stores PAT in RAM${RESET}
@@ -27,8 +27,27 @@ ${CYAN}osxkeychain${RESET}
 ${GRAY}# uses Apple keychain(macOS native)${RESET}
 ${CYAN}secret${RESET}
 ${GRAY}# Linux native, uses libsecret with glib2 to talk to [Kwallet, Gnome keyring, etc..]${RESET}
-${SLATE_GRAY}──» ─────────────────────────────────✧*̥˚ ─── ✦${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
 git config ${BLUE}--global${RESET} ${CYAN}core.editor${RESET}
-${GRAY}[${RESET}${YELLOW}"code --wait"${RESET} ${GRAY}|${RESET} ${YELLOW}nvim${RESET} ${GRAY}|${RESET} ${YELLOW}emacs${RESET} ${GRAY}| etc.. ]${RESET}
+${GRAY}[${RESET}${YELLOW}"code --wait"${RESET} ${GRAY}|${RESET} ${YELLOW}nvim${RESET} ${GRAY}|${RESET} ${YELLOW}emacs${RESET} ${GRAY}| etc..]${RESET}
 ${GRAY}# you can use flags like "emacs -nw"${RESET}
-${SLATE_GRAY}──» ─────────────────────────────────✧*̥˚ ─── ✦${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+git diff main origin/main
+${GRAY}# compares specific named branch${RESET}
+${GRAY}# use git fetch before using git diff${RESET}
+git diff @{u} HEAD
+${GRAY}# compares @{u} (current branch) to its remote branch${RESET}
+git reflog
+git log origin/main..main --oneline
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+git fetch origin
+git status
+${GRAY}# quick summary${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+${PURPLE}force overwrite your current repo with the remote repo${RESET}
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+${GRAY}# git clean -fd clean up any untracked files or directories you created locally (Optional)${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+
