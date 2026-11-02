@@ -1,24 +1,46 @@
-${PURPLE}setup first time${RESET}
+${PINK}setup first time${RESET}
 git config ${BLUE}--global${RESET} ${CYAN}user.name${RESET} ${YELLOW}\"commit username\"${RESET}
 git config ${BLUE}--global${RESET} ${CYAN}user.email${RESET} ${YELLOW}commitemail${RESET}
 git config ${BLUE}--global${RESET} ${CYAN}init.defaultBranch${RESET} ${CYAN}main${RESET}
 git config ${BLUE}--global${RESET} ${CYAN}core.editor${RESET} ${YELLOW}nvim${RESET}
-git config ${BLUE}--global${RESET} ${CYAN}user.name${RESET}
-──» ─────────────────────────────────✧*̥˚ ─── ✦
+git config ${BLUE}--global${RESET} ${CYAN}credential.helper${RESET} ${YELLOW}\"cache --timeout=3600\"${RESET}
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+${PINK}create repo and ${PURPLE}manage remote${RESET}
+cd ${SLATE_GRAY}~/myrepo${RESET}
+git ${ORANGE}init${RESET}
+git ${ORANGE}add${RESET} ${SLATE_GRAY}.${RESET}
+git ${ORANGE}commit${RESET} ${MINT}-m${RESET} ${YELLOW}'Initial commit'${RESET}
+git remote ${ORANGE}add${RESET} ${CYAN}origin${RESET} ${YELLOW}https://github.com/username/repo.git${RESET}
+git ${ORANGE}push${RESET} ${MINT}-u${RESET} ${CYAN}origin main${RESET}
+
+git remote ${ORANGE}set-url${RESET} ${CYAN}origin${RESET} ${YELLOW}https://github.com/username/repo${RESET}
+git ${MINT}ls-remote${RESET}
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+${PINK}force overwrite your current repo with the remote repo${RESET}
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
 ${PURPLE}manage config${RESET}
 git config ${BLUE}--global${RESET} ${CYAN}user.name${RESET}
 git config ${BLUE}--global${RESET} ${MINT}--list${RESET}
 git config ${BLUE}--global${RESET} ${MINT}--list --showorigin${RESET}
 git config ${BLUE}--global${RESET} ${SOFT_RED}--unset${RESET} ${CYAN}user.name${RESET}
 git config ${BLUE}--global${RESET} ${ORANGE}--edit${RESET}
-──» ─────────────────────────────────✧*̥˚ ─── ✦
-${PURPLE}manage handling PAT(Personal Access Token)${RESET}
-git config ${BLUE}--global${RESET} ${CYAN}credential.helper${RESET} ${YELLOW}\"cache --timeout=3600\"${RESET}
-──» ─────────────────────────────────✧*̥˚ ─── ✦
-${PURPLE}force overwrite your current repo with the remote repo${RESET}
-git fetch origin
-git reset --hard origin/main
-git clean -fd
-${GRAY}# git clean -fd clean up untracked files or directories you created (Optional)${RESET}
-──» ─────────────────────────────────✧*̥˚ ─── ✦
-
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+${PURPLE}status and logs${RESET}
+git ${MINT}status${RESET}
+git ${MINT}log${RESET} ${BLUE}--oneline${RESET} ${MINT}--graph${RESET} ${BLUE}--all${RESET}
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+${PURPLE}manage branches${RESET}
+git branch ${MINT}--list${RESET}
+git switch ${BLUE}-c${RESET} ${CYAN}feature/test${RESET}
+git switch ${CYAN}main${RESET}
+git merge ${CYAN}feature/test${RESET}
+git branch ${SOFT_RED}-d${RESET} ${CYAN}feature/test${RESET}
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+${PURPLE}reset and restore${RESET}
+git restore ${SLATE_GRAY}src/app.py${RESET}
+git reset ${BLUE}--soft${RESET} ${CYAN}HEAD~1${RESET}
+git reset ${SOFT_RED}--hard${RESET} ${CYAN}HEAD~1${RESET}
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦

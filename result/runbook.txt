@@ -1,24 +1,46 @@
-[38;5;141msetup first time[0m
+[38;5;218msetup first time[0m
 git config [38;5;117m--global[0m [38;5;152muser.name[0m [38;5;221m"commit username"[0m
 git config [38;5;117m--global[0m [38;5;152muser.email[0m [38;5;221mcommitemail[0m
 git config [38;5;117m--global[0m [38;5;152minit.defaultBranch[0m [38;5;152mmain[0m
 git config [38;5;117m--global[0m [38;5;152mcore.editor[0m [38;5;221mnvim[0m
-git config [38;5;117m--global[0m [38;5;152muser.name[0m
-──» ─────────────────────────────────✧*̥˚ ─── ✦
+git config [38;5;117m--global[0m [38;5;152mcredential.helper[0m [38;5;221m"cache --timeout=3600"[0m
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+[38;5;218mcreate repo and [38;5;141mmanage remote[0m
+cd [38;5;145m~/myrepo[0m
+git [38;5;215minit[0m
+git [38;5;215madd[0m [38;5;145m.[0m
+git [38;5;215mcommit[0m [38;5;121m-m[0m [38;5;221m'Initial commit'[0m
+git remote [38;5;215madd[0m [38;5;152morigin[0m [38;5;221mhttps://github.com/username/repo.git[0m
+git [38;5;215mpush[0m [38;5;121m-u[0m [38;5;152morigin main[0m
+
+git remote [38;5;215mset-url[0m [38;5;152morigin[0m [38;5;221mhttps://github.com/username/repo[0m
+git [38;5;121mls-remote[0m
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+[38;5;218mforce overwrite your current repo with the remote repo[0m
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
 [38;5;141mmanage config[0m
 git config [38;5;117m--global[0m [38;5;152muser.name[0m
 git config [38;5;117m--global[0m [38;5;121m--list[0m
 git config [38;5;117m--global[0m [38;5;121m--list --showorigin[0m
 git config [38;5;117m--global[0m [38;5;203m--unset[0m [38;5;152muser.name[0m
 git config [38;5;117m--global[0m [38;5;215m--edit[0m
-──» ─────────────────────────────────✧*̥˚ ─── ✦
-[38;5;141mmanage handling PAT(Personal Access Token)[0m
-git config [38;5;117m--global[0m [38;5;152mcredential.helper[0m [38;5;221m"cache --timeout=3600"[0m
-──» ─────────────────────────────────✧*̥˚ ─── ✦
-[38;5;141mforce overwrite your current repo with the remote repo[0m
-git fetch origin
-git reset --hard origin/main
-git clean -fd
-[38;5;246m# git clean -fd clean up untracked files or directories you created (Optional)[0m
-──» ─────────────────────────────────✧*̥˚ ─── ✦
-
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+[38;5;141mstatus and logs[0m
+git [38;5;121mstatus[0m
+git [38;5;121mlog[0m [38;5;117m--oneline[0m [38;5;121m--graph[0m [38;5;117m--all[0m
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+[38;5;141mmanage branches[0m
+git branch [38;5;121m--list[0m
+git switch [38;5;117m-c[0m [38;5;152mfeature/test[0m
+git switch [38;5;152mmain[0m
+git merge [38;5;152mfeature/test[0m
+git branch [38;5;203m-d[0m [38;5;152mfeature/test[0m
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
+[38;5;141mreset and restore[0m
+git restore [38;5;145msrc/app.py[0m
+git reset [38;5;117m--soft[0m [38;5;152mHEAD~1[0m
+git reset [38;5;203m--hard[0m [38;5;152mHEAD~1[0m
+◢◤◢◤ ─────────────────────────────── ✦ ✧ *̥˚ ─── ✦
