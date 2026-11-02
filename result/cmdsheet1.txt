@@ -16,6 +16,8 @@ git [38;5;215madd[0m [38;5;145mLICENSE README.md[0m
 git [38;5;215madd[0m [38;5;145m.[0m
 git [38;5;215mcommit[0m [38;5;121m-m[0m [38;5;221m'Intializing git'[0m
 git remote [38;5;215madd[0m [38;5;152morigin[0m [38;5;221mhttps://github.com/username/repo.git[0m
+git remote [38;5;215mset-url[0m [38;5;152morigin[0m [38;5;221mhttps://github.com/username/repo[0m
+git [38;5;121mls-remote[0m
 git [38;5;215mpush[0m [38;5;121m-u[0m [38;5;152morigin main[0m
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
 git [38;5;121mstatus[0m
@@ -24,10 +26,10 @@ git [38;5;121mdiff[0m
 git [38;5;121mshow[0m [38;5;152mHEAD[0m
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
 git branch [38;5;121m--list[0m
-git switch [38;5;117m-c[0m [38;5;152mfeature/devops-test[0m
+git switch [38;5;117m-c[0m [38;5;152mfeature/test[0m
 git switch [38;5;152mmain[0m
-git merge [38;5;152mfeature/devops-test[0m
-git branch [38;5;203m-d[0m [38;5;152mfeature/devops-test[0m
+git merge [38;5;152mfeature/test[0m
+git branch [38;5;203m-d[0m [38;5;152mfeature/test[0m
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
 git stash
 git stash [38;5;121mlist[0m
@@ -37,4 +39,3 @@ git restore [38;5;145msrc/app.py[0m
 git reset [38;5;117m--soft[0m [38;5;152mHEAD~1[0m
 git reset [38;5;203m--hard[0m [38;5;152mHEAD~1[0m
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
-

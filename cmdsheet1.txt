@@ -14,8 +14,10 @@ cd ${SLATE_GRAY}~/myrepo${RESET}
 git ${ORANGE}init${RESET}
 git ${ORANGE}add${RESET} ${SLATE_GRAY}LICENSE README.md${RESET}
 git ${ORANGE}add${RESET} ${SLATE_GRAY}.${RESET}
-git ${ORANGE}commit${RESET} ${MINT}-m${RESET} ${YELLOW}'Intializing git'${RESET}
+git ${ORANGE}commit${RESET} ${MINT}-m${RESET} ${YELLOW}'Initial commit'${RESET}
 git remote ${ORANGE}add${RESET} ${CYAN}origin${RESET} ${YELLOW}https://github.com/username/repo.git${RESET}
+git remote ${ORANGE}set-url${RESET} ${CYAN}origin${RESET} ${YELLOW}https://github.com/username/repo${RESET}
+git ${MINT}ls-remote${RESET}
 git ${ORANGE}push${RESET} ${MINT}-u${RESET} ${CYAN}origin main${RESET}
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
 git ${MINT}status${RESET}
@@ -24,10 +26,10 @@ git ${MINT}diff${RESET}
 git ${MINT}show${RESET} ${CYAN}HEAD${RESET}
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
 git branch ${MINT}--list${RESET}
-git switch ${BLUE}-c${RESET} ${CYAN}feature/devops-test${RESET}
+git switch ${BLUE}-c${RESET} ${CYAN}feature/test${RESET}
 git switch ${CYAN}main${RESET}
-git merge ${CYAN}feature/devops-test${RESET}
-git branch ${SOFT_RED}-d${RESET} ${CYAN}feature/devops-test${RESET}
+git merge ${CYAN}feature/test${RESET}
+git branch ${SOFT_RED}-d${RESET} ${CYAN}feature/test${RESET}
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
 git stash
 git stash ${MINT}list${RESET}
@@ -37,4 +39,3 @@ git restore ${SLATE_GRAY}src/app.py${RESET}
 git reset ${BLUE}--soft${RESET} ${CYAN}HEAD~1${RESET}
 git reset ${SOFT_RED}--hard${RESET} ${CYAN}HEAD~1${RESET}
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
-

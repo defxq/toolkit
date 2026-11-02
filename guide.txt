@@ -1,0 +1,34 @@
+${BLUE}--system${RESET}
+${YELLOW}[path]/etc/gitconfig${RESET}
+
+${BLUE}--global${RESET}
+${YELLOW}~/.gitconfig${RESET} or ${YELLOW}~/.config/git/config${RESET} 
+${GRAY}# if both then, ~/.gitconfig will overwrite${RESET}
+
+${BLUE}--local${RESET}
+${YELLOW}.git/config${RESET}
+${GRAY}# must be inside a repo to use it${RESET}
+
+${GRAY}{local will overwrite global and global will overwrite system}${RESET}
+${SLATE_GRAY}──» ─────────────────────────────────✧*̥˚ ─── ✦${RESET}
+git branch ${ORANGE}-M${RESET} ${CYAN}main${RESET}
+${GRAY}# changes default master branch to main${RESET}
+${GRAY}# setting init.defaultBranch in --gobal or --system will automatically set it for your future 'git init'${RESET}
+
+${SLATE_GRAY}──» ─────────────────────────────────✧*̥˚ ─── ✦${RESET}
+git config ${BLUE}--global${RESET} ${CYAN}credential.helper${RESET}
+${YELLOW}"cache --timeout=3600"${RESET}
+${GRAY}# 3600s = 1 hour, stores PAT in RAM${RESET}
+${CYAN}store${RESET}
+${GRAY}# stores your pat in plain text file as https://user:PAT@github.com in ~/.git-credentials and can only store one at a time${RESET}
+${CYAN}manager${RESET}
+${GRAY}# uses GCM(Git Credential Manager) and windows strictly include GCM installation proccess when installing git${RESET}
+${CYAN}osxkeychain${RESET}
+${GRAY}# uses Apple keychain(macOS native)${RESET}
+${CYAN}secret${RESET}
+${GRAY}# Linux native, uses libsecret with glib2 to talk to [Kwallet, Gnome keyring, etc..]${RESET}
+${SLATE_GRAY}──» ─────────────────────────────────✧*̥˚ ─── ✦${RESET}
+git config ${BLUE}--global${RESET} ${CYAN}core.editor${RESET}
+${GRAY}[${RESET}${YELLOW}"code --wait"${RESET} ${GRAY}|${RESET} ${YELLOW}nvim${RESET} ${GRAY}|${RESET} ${YELLOW}emacs${RESET} ${GRAY}| etc.. ]${RESET}
+${GRAY}# you can use flags like "emacs -nw"${RESET}
+${SLATE_GRAY}──» ─────────────────────────────────✧*̥˚ ─── ✦${RESET}

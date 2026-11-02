@@ -1,20 +1,19 @@
-PASTEL_RED=$'\x1b[38;5;211m'
-PASTEL_ORANGE=$'\x1b[38;5;215m'
-PASTEL_YELLOW=$'\x1b[38;5;221m'
-PASTEL_GREEN=$'\x1b[38;5;120m'
-PASTEL_MINT=$'\x1b[38;5;121m'
-PASTEL_CYAN=$'\x1b[38;5;152m'
-PASTEL_BLUE=$'\x1b[38;5;117m'
-PASTEL_PURPLE=$'\x1b[38;5;141m'
-PASTEL_PINK=$'\x1b[38;5;218m'
-PASTEL_ROSE=$'\x1b[38;5;224m'
-
-PASTEL_GRAY=$'\x1b[38;5;246m'
-PASTEL_LIGHT_GRAY=$'\x1b[38;5;250m'
-PASTEL_SLATE=$'\x1b[38;5;145m'
-
+RED=$'\x1b[38;5;211m'
+SOFT_RED=$'\x1b[38;5;203m'
+ORANGE=$'\x1b[38;5;215m'
+YELLOW=$'\x1b[38;5;221m'
+GREEN=$'\x1b[38;5;120m'
+MINT=$'\x1b[38;5;121m'
+CYAN=$'\x1b[38;5;152m'
+BLUE=$'\x1b[38;5;117m'
+PURPLE=$'\x1b[38;5;141m'
+PINK=$'\x1b[38;5;218m'
+ROSE=$'\x1b[38;5;224m'
+GRAY=$'\x1b[38;5;246m'
+LIGHT_GRAY=$'\x1b[38;5;250m'
+SLATE_GRAY=$'\x1b[38;5;145m'
 RESET=$'\x1b[0m'
 
-printf "${PASTEL_RED}Red${RESET}  ${PASTEL_ORANGE}Orange${RESET}  ${PASTEL_YELLOW}Yellow${RESET}  ${PASTEL_GREEN}Green${RESET}  ${PASTEL_MINT}Mint${RESET}  ${PASTEL_CYAN}Cyan${RESET}  ${PASTEL_BLUE}Blue${RESET}  ${PASTEL_PURPLE}Purple${RESET}  ${PASTEL_PINK}Pink${RESET}  ${PASTEL_ROSE}Rose${RESET}\n"
-printf "${PASTEL_GRAY}Gray${RESET}  ${PASTEL_LIGHT_GRAY}Light Gray${RESET}  ${PASTEL_SLATE}Slate Gray${RESET}\n"
-
+printf "${RED}Red${RESET}  ${ORANGE}Orange${RESET}  ${YELLOW}Yellow${RESET}  ${GREEN}Green${RESET}  ${MINT}Mint${RESET}  ${CYAN}Cyan${RESET}  ${BLUE}Blue${RESET}  ${PURPLE}Purple${RESET}  ${PINK}Pink${RESET}  ${ROSE}Rose${RESET}\n"
+printf "${GRAY}Gray${RESET}  ${LIGHT_GRAY}Light Gray${RESET}  ${SLATE_GRAY}Slate Gray${RESET} ${SOFT_RED}Soft Red${RESET}\n"
+echo hello world 

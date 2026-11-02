@@ -1,0 +1,1 @@
+./colorize_pastel.sh text.txt result/text.t
