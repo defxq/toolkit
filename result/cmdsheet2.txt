@@ -1,0 +1,24 @@
+git config [38;5;117m--global[0m user.name [38;5;221m"commit username"[0m
+git config [38;5;117m--global[0m user.email [38;5;221mcommitemail[0m
+git config [38;5;117m--global[0m init.defaultBranch [38;5;221mmain[0m
+git config [38;5;117m--global[0m core.editor [38;5;221mnvim[0m
+git config [38;5;117m--global[0m user.name
+git config [38;5;117m--global[0m --list
+git config [38;5;117m--global[0m --list --showorigin
+git config [38;5;117m--global[0m --unset [38;5;152muser.name[0m
+git config [38;5;117m--global[0m --edit
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+git config --global credential.helper [38;5;117m"cache --timeout=3600"[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+cd [38;5;221m~/myrepo[0m
+git init
+git add [38;5;221mLICENSE README.md[0m
+git add .
+git commit -m [38;5;221m'Intializing git'[0m
+git remote add origin [38;5;221mhttps://github.com/username/repo.git[0m
+git push -u origin [38;5;152mmain[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+
+
+
+

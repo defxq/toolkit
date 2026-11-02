@@ -1,0 +1,37 @@
+${BLUE}--system${RESET}
+[path]/etc/gitconfig
+
+${BLUE}--global${RESET}
+~/.gitconfig or ~/.config/git/config 
+${LIGHT_GRAY}# if both then, ~/.gitconfig will overwrite${RESET}
+
+${BLUE}--local${RESET}
+.git/config
+${LIGHT_GRAY}# must be inside a repo to use it${RESET}
+
+${LIGHT_GRAY}{local will overwrite global and global will overwrite system}${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+git branch -M main
+${LIGHT_GRAY}# changes default master branch to main
+${LIGHT_GRAY}# setting init.defaultBranch in --gobal or --system will automatically set it for your future 'git init'
+${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+git config --global credential.helper 
+${BLUE}\"cache --timeout=3600\"${RESET}
+${LIGHT_GRAY}# 3600s = 1 hour, stores PAT in RAM${RESET}
+${BLUE}store${RESET}
+${LIGHT_GRAY}# stores your pat in plain text file as https://user:PAT@github.com in ~/.git-credentials and can only store one at a time${RESET}
+${BLUE}manager${RESET}
+${LIGHT_GRAY}# uses GCM(Git Credential Manager) and windows strictly include GCM installation proccess when installing git${RESET}
+${BLUE}osxkeychain${RESET}
+${LIGHT_GRAY}# uses Apple keychain(macOS native)${RESET}
+${BLUE}secret${RESET}
+${LIGHT_GRAY}# Linux native, uses libsecret with glib2 to talk to [Kwallet, Gnome keyring, etc..]${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+git config --global core.editor
+${BLUE}[\"code --wait\" | nvim | emacs | etc.. ]${RESET}
+${LIGHT_GRAY}# you can use flags like \"emacs -nw\"${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+
+
+
