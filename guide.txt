@@ -44,10 +44,16 @@ git fetch origin
 git status
 ${GRAY}# quick summary${RESET}
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
-${PURPLE}force overwrite your current repo with the remote repo${RESET}
-git fetch origin
-git reset --hard origin/main
-git clean -fd
-${GRAY}# git clean -fd clean up any untracked files or directories you created locally (Optional)${RESET}
+echo -e \"protocol=https\nhost=${BLUE}github.com${RESET}\nusername=${YELLOW}github_username${RESET}\npassword=${YELLOW}github_PAT${RESET}\" | git credential approve
+${LIGHT_GRAY}# this is automatically triggered behind the scenes when using cmds like git push/clone${RESET}
+
+echo -e \"protocol=https\nhost=${BLUE}github.com${RESET}\" | git credential reject
+${LIGHT_GRAY}# this removes the stored PAT in OS built-in keychain or store or cache or any other methods defined in credential.helper${RESET}
+
+echo -e \"protocol=https\nhost=${BLUE} github.com${RESET}\nusername=${YELLOW}githubusername${REST}\" | git credential reject
+${LIGHT_GRAY}# the above method can sometimes fail in cases like storing multiple PAT using OS built-in keychains, so you provide the username to remove it individually ${RESET}
+
+${LIGHT_GRAY}# you can replace github with other remote like gitlab${RESET}
 ──» ─────────────────────────────────✧*̥˚ ─── ✦
+
 

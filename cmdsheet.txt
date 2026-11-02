@@ -1,15 +1,3 @@
-git config ${BLUE}--global${RESET} ${CYAN}user.name${RESET} ${YELLOW}\"commit username\"${RESET}
-git config ${BLUE}--global${RESET} ${CYAN}user.email${RESET} ${YELLOW}commitemail${RESET}
-git config ${BLUE}--global${RESET} ${CYAN}init.defaultBranch${RESET} ${CYAN}main${RESET}
-git config ${BLUE}--global${RESET} ${CYAN}core.editor${RESET} ${YELLOW}nvim${RESET}
-git config ${BLUE}--global${RESET} ${CYAN}user.name${RESET}
-git config ${BLUE}--global${RESET} ${MINT}--list${RESET}
-git config ${BLUE}--global${RESET} ${MINT}--list --showorigin${RESET}
-git config ${BLUE}--global${RESET} ${SOFT_RED}--unset${RESET} ${CYAN}user.name${RESET}
-git config ${BLUE}--global${RESET} ${ORANGE}--edit${RESET}
-──» ─────────────────────────────────✧*̥˚ ─── ✦
-git config ${BLUE}--global${RESET} ${CYAN}credential.helper${RESET} ${YELLOW}\"cache --timeout=3600\"${RESET}
-──» ─────────────────────────────────✧*̥˚ ─── ✦
 cd ${SLATE_GRAY}~/myrepo${RESET}
 git ${ORANGE}init${RESET}
 git ${ORANGE}add${RESET} ${SLATE_GRAY}LICENSE README.md${RESET}

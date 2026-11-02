@@ -10,12 +10,12 @@
 [38;5;246m# must be inside a repo to use it[0m
 
 [38;5;246m{local will overwrite global and global will overwrite system}[0m
-[38;5;145m──» ─────────────────────────────────✧*̥˚ ─── ✦[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
 git branch [38;5;215m-M[0m [38;5;152mmain[0m
 [38;5;246m# changes default master branch to main[0m
 [38;5;246m# setting init.defaultBranch in --gobal or --system will automatically set it for your future 'git init'[0m
 
-[38;5;145m──» ─────────────────────────────────✧*̥˚ ─── ✦[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
 git config [38;5;117m--global[0m [38;5;152mcredential.helper[0m
 [38;5;221mcache --timeout=3600[0m
 [38;5;246m# 3600s = 1 hour, stores PAT in RAM[0m
@@ -27,8 +27,33 @@ git config [38;5;117m--global[0m [38;5;152mcredential.helper[0m
 [38;5;246m# uses Apple keychain(macOS native)[0m
 [38;5;152msecret[0m
 [38;5;246m# Linux native, uses libsecret with glib2 to talk to [Kwallet, Gnome keyring, etc..][0m
-[38;5;145m──» ─────────────────────────────────✧*̥˚ ─── ✦[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
 git config [38;5;117m--global[0m [38;5;152mcore.editor[0m
-[38;5;246m[[0m[38;5;221mcode --wait[0m [38;5;246m|[0m [38;5;221mnvim[0m [38;5;246m|[0m [38;5;221memacs[0m [38;5;246m| etc.. ][0m
+[38;5;246m[[0m[38;5;221mcode --wait[0m [38;5;246m|[0m [38;5;221mnvim[0m [38;5;246m|[0m [38;5;221memacs[0m [38;5;246m| etc..][0m
 [38;5;246m# you can use flags like emacs -nw[0m
-[38;5;145m──» ─────────────────────────────────✧*̥˚ ─── ✦[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+git diff main origin/main
+[38;5;246m# compares specific named branch[0m
+[38;5;246m# use git fetch before using git diff[0m
+git diff @{u} HEAD
+[38;5;246m# compares @{u} (current branch) to its remote branch[0m
+git reflog
+git log origin/main..main --oneline
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+git fetch origin
+git status
+[38;5;246m# quick summary[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+echo -e "protocol=https\nhost=[38;5;117mgithub.com[0m\nusername=[38;5;221mgithub_username[0m\npassword=[38;5;221mgithub_PAT[0m" | git credential approve
+[38;5;250m# this is automatically triggered behind the scenes when using cmds like git push/clone[0m
+
+echo -e "protocol=https\nhost=[38;5;117mgithub.com[0m" | git credential reject
+[38;5;250m# this removes the stored PAT in OS built-in keychain or store or cache or any other methods defined in credential.helper[0m
+
+echo -e "protocol=https\nhost=[38;5;117m github.com[0m\nusername=[38;5;221mgithubusername" | git credential reject
+[38;5;250m# the above method can sometimes fail in cases like storing multiple PAT using OS built-in keychains, so you provide the username to remove it individually [0m
+
+[38;5;250m# you can replace github with other remote like gitlab[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+
+

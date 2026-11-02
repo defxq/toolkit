@@ -1,0 +1,24 @@
+${PURPLE}setup first time${RESET}
+git config ${BLUE}--global${RESET} ${CYAN}user.name${RESET} ${YELLOW}\"commit username\"${RESET}
+git config ${BLUE}--global${RESET} ${CYAN}user.email${RESET} ${YELLOW}commitemail${RESET}
+git config ${BLUE}--global${RESET} ${CYAN}init.defaultBranch${RESET} ${CYAN}main${RESET}
+git config ${BLUE}--global${RESET} ${CYAN}core.editor${RESET} ${YELLOW}nvim${RESET}
+git config ${BLUE}--global${RESET} ${CYAN}user.name${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+${PURPLE}manage config${RESET}
+git config ${BLUE}--global${RESET} ${CYAN}user.name${RESET}
+git config ${BLUE}--global${RESET} ${MINT}--list${RESET}
+git config ${BLUE}--global${RESET} ${MINT}--list --showorigin${RESET}
+git config ${BLUE}--global${RESET} ${SOFT_RED}--unset${RESET} ${CYAN}user.name${RESET}
+git config ${BLUE}--global${RESET} ${ORANGE}--edit${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+${PURPLE}manage handling PAT(Personal Access Token)${RESET}
+git config ${BLUE}--global${RESET} ${CYAN}credential.helper${RESET} ${YELLOW}\"cache --timeout=3600\"${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+${PURPLE}force overwrite your current repo with the remote repo${RESET}
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+${GRAY}# git clean -fd clean up untracked files or directories you created (Optional)${RESET}
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+

@@ -1,0 +1,24 @@
+[38;5;141msetup first time[0m
+git config [38;5;117m--global[0m [38;5;152muser.name[0m [38;5;221m"commit username"[0m
+git config [38;5;117m--global[0m [38;5;152muser.email[0m [38;5;221mcommitemail[0m
+git config [38;5;117m--global[0m [38;5;152minit.defaultBranch[0m [38;5;152mmain[0m
+git config [38;5;117m--global[0m [38;5;152mcore.editor[0m [38;5;221mnvim[0m
+git config [38;5;117m--global[0m [38;5;152muser.name[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+[38;5;141mmanage config[0m
+git config [38;5;117m--global[0m [38;5;152muser.name[0m
+git config [38;5;117m--global[0m [38;5;121m--list[0m
+git config [38;5;117m--global[0m [38;5;121m--list --showorigin[0m
+git config [38;5;117m--global[0m [38;5;203m--unset[0m [38;5;152muser.name[0m
+git config [38;5;117m--global[0m [38;5;215m--edit[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+[38;5;141mmanage handling PAT(Personal Access Token)[0m
+git config [38;5;117m--global[0m [38;5;152mcredential.helper[0m [38;5;221m"cache --timeout=3600"[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+[38;5;141mforce overwrite your current repo with the remote repo[0m
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+[38;5;246m# git clean -fd clean up untracked files or directories you created (Optional)[0m
+──» ─────────────────────────────────✧*̥˚ ─── ✦
+
